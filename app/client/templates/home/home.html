@@ -1,0 +1,28 @@
+<template name="Home">
+	{{#if currentUser}}
+		<button type="button" class="btn btn-primary btn-lg btn-block login-button" data-logout>Logout</button>
+	{{else}}
+		{{#if loggingIn}}
+			Logging in...
+		{{else}}
+			<button type="button" class="btn btn-primary btn-lg btn-block login-button" data-login>Login with Facebook</button>
+		{{/if}}
+	{{/if}}
+	<div class="section-top">
+  		<h1 class="text-center">Let's Meet</h1>
+	</div>
+	<div class="section-content text-center">
+		<h2>TO TALK ABOUT</h2>
+		<p>Euro 2016</p>
+		<h2>AT</h2>
+		<p>Cool Bun, St-Gilles</p>
+		<h2>ON THE</h2>
+		<p>14th November 2015 at 8pm</p>
+	</div>
+	<a href="#" data-accept>
+		<div class="section-cta text-center">
+			<p>YES!</p>
+		</div>
+	</a>
+	<p class="text-center">or shake it!</p>
+</template>

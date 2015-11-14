@@ -1,0 +1,24 @@
+<template name="Login">
+	<div class="login">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="login-top">
+						
+					</div>
+					<div class="login-container">
+						{{#if currentUser}}
+							<button type="button" class="btn btn-primary btn-lg btn-block login-button" data-logout>Logout</button>
+						{{else}}
+							{{#if loggingIn}}
+								Logging in...
+							{{else}}
+								<button type="button" class="btn btn-primary btn-lg btn-block login-button" data-login><i class="glyphicon glyphicon-off"></i> Login with Facebook</button>
+							{{/if}}
+						{{/if}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
